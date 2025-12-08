@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}About us{% endblock %}
+{% block content %}
+<div data-aos="fade-up">
+<h2>Our Services</h2>
+    <p>Professional bookkeeping for your business</p>
+</div>
+<img src="{% static 'img/pe.jpeg' %}" width="200" class="rounded mb-3">
+<p>Our Services:</p>
+<ul>
+    <li>✔ Bank Reconciliation
+Keep your accounts accurate and up-to-date. We ensure every transaction is properly recorded and matched.
+</li>
+    <li>✔ Accounts Payable & Receivable Management
+Stay on top of your cash flow. We help you manage vendor payments, invoices, and collections efficiently.
+</li>
+    <li>✔ Financial Reporting
+Get clear monthly and quarterly financial reports that show your business’s true performance — so you can make confident decisions.
+</li>
+    <li>✔ Payroll Processing
+Accurate, on-time payroll for you and your team — handled with care and compliance.
+</li>
+    <li>✔ Tax Preparation Support
+We organize and prepare your financials for smooth, stress-free tax filing — working seamlessly with your CPA or tax preparer.
+</li>
+</ul>
+{% endblock %}

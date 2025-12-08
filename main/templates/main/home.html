@@ -1,0 +1,121 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+<!-- Hero -->
+<div class="parallax" style="background-image:url({% static 'img/t1.jpg' %});
+        heigh: 200vh;
+        background-size: cover;
+        background_position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        position: relative;
+        ">
+{#<div class="position-absolute wow fadeIn">#}
+        <h3 data-aos="fade-up"Hi, We can help you with bookkiping!<div>
+        <p data-aos="fade-up" data-aos-delay="200">We make your financial transactions easier!</p>
+{#        <a href="/projects/" class="btn btn-primary mt-3" data-aos="fade-up" data-aos-delay="400">Explore</a>#}
+</div>
+
+<!-- About -->
+<section class="section" data-aos="fade-up">
+    <div class="container">
+        <h2>Our Team</h2>
+        <p class="lead">
+            We are a bookkeeping team that values accuracy, confidentiality,
+            and communication. Our mission is simple:
+            to take the stress out of your finances so you can focus on running your business.
+            With a detail-oriented approach and a genuine passion for helping entrepreneurs,
+            we deliver bookkeeping you can trust.
+        </p>
+    </div>
+</section>
+
+<!-- Parallax 2 -->
+<div style="
+    background: linear-gradient(135deg, #e0f3ff, #a8d8ff);
+    padding: 100px 0;
+    text-align: center;
+">
+    <h1 data-aos="fade-up"> Every project is worth a thousand words.</h1>
+</div>
+
+<!-- Projects -->
+<section class="section" data-aos="fade-up">
+        <div class="container">
+{#            <h2>Our Projects</h2>#}
+            <div class="container mt-4">
+
+                <!-- Industries -->
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-4">
+                            <img src="{% static 'img/05.jpg.jpg' %}" class="img-fluid rounded-start" alt="Industries">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="p-4">
+                                <h5>Industries</h5>
+                                <p>Construction / General Constructors</p>
+                                <p>Retail / Wholesale</p>
+                                <p>Restaurants / Caterers / Food Trucks</p>
+                                <p>Startups</p>
+                                <p>Independent Consultants</p>
+                                <p>And many more</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-4">
+                             <img src="{% static 'img/04.jpg.jpg' %}" class="img-fluid rounded-start" alt="Skills">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="p-4">
+                            <h5>Skills</h5>
+                            <p>Accounts Reconciliation</p>
+                            <p>Financial Reports (Standard and Customized)</p>
+                            <p>General Ledger</p>
+                            <p>Journal Entries</p>
+                            <p>Accounts Payable</p>
+                            <p>Accounts Receivable</p>
+                            <p>Sales Tax Filings</p>
+                            <p>Payroll Processing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certification -->
+            <div class="card shadow-sm border-0 mb-4">
+                <class="row g-0">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <h5>Education and Certifications</h5>
+                            </div>
+                        <div class="d-flex gap-3 px-4 pb-4"></div>
+                        <img src="{% static 'img/22.jpg' %}" class="img-fluid rounded" style="width: 200px" alt="Certifications">
+                        <img src="{% static 'img/11.jpg' %}" class="img-fluid rounded" style="width: 200px" alt="Certifications">
+                    </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+</section>
+
+<!-- Final Call -->
+<div class="parallax" style="background-image"img/me.jpg" %}');">
+    <h2 data-aos="fade-up"> Do you want to create your own?</h2>
+    <a href="/contact/" class="btn btn-primary mt-3" data-aos="fade-up" data-aos-delay="200">Contact Us</a>
+</div>
+
+
+{% endblock %}

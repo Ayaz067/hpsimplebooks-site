@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Contacts{% endblock %}
+{% block content %}
+<h2>Contact us</h2>
+{% if success %}
+<p class="alert alert-success">Message sent!</p>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+{% endblock %}

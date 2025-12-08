@@ -1,0 +1,66 @@
+{% extends "main\base.html" %}
+{% load static %}
+{% block title %}New Client Questionnaire{% endblock %}
+{% block content %}
+<h2 class="text-center text-primary mb-4">New Client Questionnaire</h2>
+
+<!-- Hero -->
+<div class="parallax" style="background-image: url('{% static "img/bk.jpg" %}');">
+    <h1 data-aos="fade-up">Form of new client</h1>
+    <p data-aos="fade-up" data-aos-delay="200">
+        Fill form below it will help me to understand your targets and projects requirements.
+    </p>
+</div>
+
+<-- Form -->
+<section class="section" data-aos="fade-up">
+    <div class="container" style="max-width: 700px;">
+        <h2 class="text-center mb-4">Form to fill</h2>
+
+<form method="POST" action="#">
+    {% csrf_token %}
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label fw-semibold"> Name </label>
+            <input type="text" name="full_name" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label fw-semibold">Company / Project</label>
+            <input type="text" name="company" class="form-control" placeholder="Enter your company">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label fw-semibold">Email</label>
+            <input type="email" name="email" class="form-control" placeholder="example@email.com" required>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label fw-semibold">Phone</label>
+            <input type="tel" name="phone" class="form-control" placeholder="+18888888888">
+        </div>
+        <div class="col-12">
+{#        <label class="form-label fw-semibold">Project type</label>#}
+{#            <select class="form-select" name="project_type">#}
+{#                <option>Website</option>#}
+{#                <option>Mobile</option>#}
+{#                <option>Services</option>#}
+{#                <option>Other</option>#}
+{#            </select>#}
+        </div>
+        <div class="col-12">
+            <label class="form-label fw-semibold">About Project</label>
+            <textarea name="description" class="form-control" rows="4" placeholder="Enter your description"></textarea>
+        </div>
+        <div class="col-12 text-center mt-4">
+            <button type="submit" class="btn btn-primary px-5 py-2">Submit</button>
+        </div>
+    </div>
+    </form>
+    </div>
+</section>
+
+<-- Final Block -->
+<div class="parallax" style="background-image: url('{% static "img/bk.jpg" %}');">
+<h2 data-aos="fade-up">Thank you, We will get back to you soon</h2>
+</div>
+
+{% endblock %}
+

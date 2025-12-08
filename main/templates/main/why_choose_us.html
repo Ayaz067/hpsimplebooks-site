@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}About us{% endblock %}
+{% block content %}
+<h2>Why Choose Us</h2>
+<img src="{% static 'img/03.jpg.jpg' %}" width="200" class="rounded mb-3">
+<!--<p>Offers and skills</p>-->
+<ul>
+    <li>Personalized Service: You’re never just a number. We take the time to understand your business.</li>
+    <li>Accuracy You Can Trust: Reliable records that help you make smarter decisions.</li>
+    <li>Affordable Pricing: Professional bookkeeping without the big-firm price tag.</li>
+    <li>Stress-Free Experience: We handle the books so you can focus on growth.</li>
+</ul>
+{% endblock %}
