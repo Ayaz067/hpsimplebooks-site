@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3ot=&eu29!qanpk+v!xkt@tlsbs*k4jfi%u0w1rs+#nv518kl='
 
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT = True
 
 
 CSRF_COOKIE_SECURE = True
@@ -39,15 +39,15 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['hpsimplebooks.com', 'your-project-name.up.railway.app']
 ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = [
-    'hpsimplebooks.com',
-    'www.hpsimplebooks.com',
-    'web-production-a9b16.up.railway.app',
-]
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+# ALLOWED_HOSTS = [
+#     'hpsimplebooks.com',
+#     'www.hpsimplebooks.com',
+#     'web-production-a9b16.up.railway.app',
+# ]
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT = True
+# CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
 
 # Application definition
 
@@ -63,7 +63,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'path.to.WwwRedirectMiddleware',
+    # 'path.to.WwwRedirectMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

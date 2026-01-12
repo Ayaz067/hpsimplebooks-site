@@ -30,13 +30,13 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
 
-class WwwRedirectMiddleware:
-    def _init_(self, get_response):
-        self.get_response = get_response
-
-    def _call_(self, request):
-        if request.get_host().startswith('www.'):
-            return HttpResponsePermanentRedirect(
-                'https://hpsimplebooks.com' + request.get_full_path()
-            )
-        return self.get_response(request)
+# class WwwRedirectMiddleware:
+#     def _init_(self, get_response):
+#         self.get_response = get_response
+#
+#     def _call_(self, request):
+#         if request.get_host().startswith('www.'):
+#             return HttpResponsePermanentRedirect(
+#                 'https://hpsimplebooks.com' + request.get_full_path()
+#             )
+#         return self.get_response(request)
