@@ -35,17 +35,21 @@ SECURE_REDIRECT_EXEMPT = []
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = ['hpsimplebooks.com', 'your-project-name.up.railway.app']
-ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = [
-#     'hpsimplebooks.com',
-#     'www.hpsimplebooks.com',
-#     'web-production-a9b16.up.railway.app',
-# ]
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-# SECURE_SSL_REDIRECT = True
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'hpsimplebooks.com',
+    'www.hpsimplebooks.com',
+    'web-production-a9b16.up.railway.app',
+]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+CSRF_TRUSTED_ORIGINS = [
+    'https://hpsimplebooks.com',
+    'https://www.hpsimplebooks.com',
+]
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
 
